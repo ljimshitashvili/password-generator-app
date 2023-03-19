@@ -73,17 +73,20 @@ span{
 }
 
 .range{
-    width: 100%;
     -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    width: 100%;
     height: 8px;
+    background-color: var(--black);
 }
 
-.range::-webkit-slider-runnable-track{
+.range::-webkit-slider-thumb{
     -webkit-appearance: none;
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    color: var(--black);
+    background-color: var(--white);
 }
 
 .checkbox-container{
