@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+
+:root{
+    --black: #18171F;
+    --grey: #24232C;
+    --silver: #817D92;
+    --white: #E6E5EA;
+    --green: #A4FFAF;
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65;
+}
+
+body{
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #08070B;
+}
+
+header h1{
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--silver);
+}
+
+.output-container{
+    background-color: var(--grey);
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    max-width: 540px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+#output{
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--white);
+}
+
+.input-container{
+    background-color: var(--grey);
+    width: 100%;
+    max-width: 540px;
+    padding: 20px 16px;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white);
+}
+
+span{
+    float: right;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--green);
+}
+
+.range{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 8px;
+}
+
+.range::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: var(--black);
+}
+
+.checkbox-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 35px 0;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--white);
+}
+
+.checkbox-container label{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: 2px solid #E6E5EA;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+    content: "";
+    background-color: var(--green);
+    border: none;
+    background-image: url(./password-generator-app/password-generator-app/starter-code/assets/images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.strength{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    background-color: var(--black);
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.strength div{
+    display: flex;
+    align-items: center;
+}
+
+.strength h1{
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--silver);
+    text-transform: uppercase;
+}
+
+#level{
+    color: var(--white);
+    text-transform: uppercase;
+    margin-right: 16px;
+}
+
+.box-container{
+    display: flex;
+    gap: 8px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4{
+    width: 6px;
+    height: 24px;
+    border: 2px solid #E6E5EA;
+}
+
+#generate{
+    background-color: var(--green);
+    width: 100%;
+    height: 56px;
+    border: none;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: #24232C;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+}
