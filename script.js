@@ -11,6 +11,8 @@ const box3 = document.querySelector('.box3');
 const box4 = document.querySelector('.box4');
 const level = document.querySelector('#level');
 const error = document.querySelector('.error');
+const copy = document.querySelector('#copy');
+const copiedTxt = document.querySelector('#copied');
 const letterAmount = document.querySelector('#letter-amount');
 
 // Changes the color of the range input background.
@@ -29,7 +31,7 @@ slider.addEventListener('input', () => {
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let numbers = "0123456789";
-let symbols = "!@#$%^&*()_+=[]{}:;|?>.<,";
+let symbols = "!@#$%^&*()_";
 let total = "";
 let counter = 0;
 
@@ -97,12 +99,26 @@ function resetBox(){
     box4.classList.remove('strong');
 }
 
+function makeCopy(){
+    if(output.textContent){
+        copiedTxt.classList.remove("hide")
+    }
+
+    let textarea = document.createElement("textarea");
+    textarea.value = output.textContent;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("Copy");
+    document.body.removeChild(textarea);
+}
+
 
 // This is the engine of my code.
 generateButton.addEventListener('click', () => {
     output.textContent = "";
     total = "";
     counter = 0;
+    output.style.opacity = "1";
     
     resetBox();
     checkBoxes();
@@ -112,5 +128,6 @@ generateButton.addEventListener('click', () => {
         const randomLetter = total.charAt(randomIndex);
         output.textContent += randomLetter;
     }
-    
+    copy.addEventListener('click', makeCopy)
 });
+

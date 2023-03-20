@@ -45,10 +45,24 @@ header h1{
     box-sizing: border-box;
 }
 
+#copied{
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--green);
+    text-transform: uppercase;
+    float: left;
+    margin-right: 16px;
+}
+
+.hide{
+    display: none;
+}
+
 #output{
     font-size: 32px;
     line-height: 42px;
     color: var(--white);
+    opacity: 0.5;
 }
 
 .input-container{
@@ -215,4 +229,88 @@ input[type="checkbox"]:checked{
     text-transform: uppercase;
     font-family: 'JetBrains Mono', monospace;
     cursor: pointer;
+}
+
+
+
+/* desktop size */
+
+@media (min-width: 1024px){
+    main{
+        width: 540px;
+    }
+
+    .output-container{
+        padding: 0 32px;
+        margin: 24px 0;
+    }
+
+    .input-container{
+        padding: 34px 32px;
+    }
+
+    h2{
+        margin-bottom: 35px;
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    span{
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .checkbox-container{
+        margin: 42px 0;
+        gap: 19px;
+    }
+
+    .strength{
+        padding: 0 32px;
+    }
+
+    .strength h1{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #level{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    #generate{
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 32px;
+    }
+
+    /* hover */
+
+    input[type="checkbox"]:hover{
+        border: 2px solid #A4FFAF;
+    }
+
+    #generate:hover{
+        background-color: var(--grey);
+        border: 2px solid #A4FFAF;
+        color: var(--green);
+    }
+
+    button:hover svg path {
+        fill: #A4FFAF;
+    }
+
+    .range::-webkit-slider-thumb:hover{
+        background-color: var(--black);
+        border: 2px solid #A4FFAF;
+    }
+
+    #copy:hover path{
+        fill: #fff;
+    }
+
 }
