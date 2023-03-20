@@ -16,12 +16,12 @@
     <main>
         <div class="output-container">
             <h1 id="output"></h1>
-            <img src="./password-generator-app/password-generator-app/starter-code/assets/images/icon-copy.svg" alt="copy">
+            <img id="copy" src="./password-generator-app/password-generator-app/starter-code/assets/images/icon-copy.svg" alt="copy">
         </div>
         <div class="input-container">
             <label >
                 <h2>Character Length <span id="letter-amount">8</span></h2>
-                <input type="range" class="range" min="8" max="20" value="8">
+                <input type="range" class="range" min="8" max="13" value="5">
             </label>
             <div class="checkbox-container">
                 <label>
@@ -36,6 +36,7 @@
                 <label>
                     <input type="checkbox" id="symbol"> Include Symbols
                 </label>
+                <h6 class="error">Check at least one argument</h6>
             </div>
             <div class="strength">
                 <h1>strength</h1>
