@@ -70,18 +70,22 @@ function errorCheck(){
 function strengthOfPass(){
     if(counter === 1){
         box1.classList.add('too-weak');
+        level.textContent = "too-weak";
     }else if(counter === 2){
         box1.classList.add('weak');
         box2.classList.add('weak');
+        level.textContent = "weak";
     }else if(counter === 3){
         box1.classList.add('medium');
         box2.classList.add('medium');
         box3.classList.add('medium');
+        level.textContent = "medium";
     }else if(counter === 4){
         box1.classList.add('strong');
         box2.classList.add('strong');
         box3.classList.add('strong');
         box4.classList.add('strong');
+        level.textContent = "strong";
     }
 }
 
